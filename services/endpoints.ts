@@ -1,4 +1,4 @@
-import Search from "@/component/Search";
+// import Search from "@/component/Search";
 
 export default Object.freeze({
     popularMovies: "/movie//popular? ",

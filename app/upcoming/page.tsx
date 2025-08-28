@@ -1,11 +1,11 @@
 import PageTransition from "@/component/PageTransition";
-import PopularMovies from "@/component/PopularMovies";
+import UpcomingMovies from "@/component/UpcomingMovies";
 import React from "react";
 
 const TopratedMovies = () => {
   return (
     <PageTransition>
-      <PopularMovies />
+      <UpcomingMovies />
     </PageTransition>
   );
 };

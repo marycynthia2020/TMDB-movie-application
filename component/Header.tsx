@@ -38,8 +38,8 @@ const Header = () => {
 
         {/* navigation */}
         <div
-          className={`w-full flex flex-col-reverse gap-y-4 lg:flex-row lg:items-center lg:justify-between transition-transform duration-1000 ${
-            isOpen ? "" : " hidden lg:flex"
+          className={`w-full flex flex-col-reverse gap-y-4 lg:flex-row lg:items-center lg:justify-between   ${
+            isOpen ? "" : "hidden lg:flex "
           }`}
         >
           <div className="hidden lg:block">

@@ -5,25 +5,38 @@ export interface ReactChildren {
 }
 
 export interface movie {
-  adult: boolean;
-  backdrop_path: string;
-  genre_ids: [];
-  id: number;
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  release_date: string;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
+  title: string,
+  overview: string,
+  id: number,
+  poster_path: string
+}
+
+export interface movieCard {
+  movie: movie
 }
 
 export interface movie_genre {
   id: number,
   name: string
+}
+
+export interface movieDetails {
+  id: number,
+  overview: string,
+  genres: movie_genre[],
+  poster_path: string,
+  release_date: string,
+  title: string,
+  runtime: number,
+  budget: number,
+  revenue: number,
+  imdb_id: string,
+  vote_average: number,
+  vote_count: number,
+}
+
+export interface movieDetailsCard {
+  movie : movieDetails
 }
 
 export interface ThemeContextType {

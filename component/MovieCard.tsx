@@ -1,8 +1,8 @@
-import Image from "next/image";
+import {movieCard } from "@/types";
 import Link from "next/link";
 import React from "react";
 
-const MovieCard = ({movie}) => {
+const MovieCard = ({movie}: movieCard) => {
   const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
   return (
     <Link href= {`/movie/${movie.id}`} className="border border-gray-300 dark:border-gray-700 rounded-lg dark:bg-[#1e2936]">

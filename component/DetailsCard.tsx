@@ -1,7 +1,7 @@
-import { movie_genre } from "@/types";
+import { movie_genre, movieDetailsCard } from "@/types";
 import { FaStar } from "react-icons/fa";
 
-const DetailsCard = ({ movie }) => {
+const DetailsCard = ({ movie}: movieDetailsCard) => {
   const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
   return (
     <div className="flex flex-col lg:flex-row gap-x-20 items-center  lg:items-start gap-y-10 lg:justify-between">

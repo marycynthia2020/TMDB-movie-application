@@ -20,6 +20,24 @@ class BaseURL {
     }
   };
 
+  httpGetTopRatedMovies = async () => {
+    try {
+      const response = await AxiosInstance.get(endpoints.topRatedMovies);
+      return response.data;
+    } catch (error: any) {
+      throw new Error(error.response?.data?.message || "movies not found");
+    }
+  };
+
+  httpGetUpcomingMovies = async () => {
+    try {
+      const response = await AxiosInstance.get(endpoints.upComingMovies);
+      return response.data;
+    } catch (error: any) {
+      throw new Error(error.response?.data?.message || "movies not found");
+    }
+  };
+
   httpGetMovieById = async (movieId: string) => {
     try {
       const response = await AxiosInstance.get(endpoints.getMovieById(movieId));
@@ -29,17 +47,17 @@ class BaseURL {
     }
   };
 
-  httpGetSearchedMovies = async(queryParam:string)=>{
-     try {
-      const response = await AxiosInstance.get(endpoints.SearchMovies(queryParam));
+  httpGetSearchedMovies = async (queryParam: string) => {
+    try {
+      const response = await AxiosInstance.get(
+        endpoints.SearchMovies(queryParam)
+      );
       return response.data;
     } catch (error: any) {
       throw new Error(error.response?.data?.message || "movies not found");
     }
+  };
 }
-
-}
-
 
 const http = new BaseURL();
 export default http;

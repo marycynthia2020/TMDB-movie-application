@@ -1,13 +1,13 @@
-import PageTransition from "@/component/PageTransition";
-import PopularMovies from "@/component/PopularMovies";
-import React from "react";
+import PageTransition from '@/component/PageTransition'
+import TopRatedMovies from '@/component/TopRated'
+import React from 'react'
 
-const TopRatedMovies = () => {
+const TopRatedmovies = () => {
   return (
     <PageTransition>
-      <PopularMovies />
+      <TopRatedMovies />
     </PageTransition>
-  );
-};
+  )
+}
 
-export default TopRatedMovies;
+export default TopRatedmovies
