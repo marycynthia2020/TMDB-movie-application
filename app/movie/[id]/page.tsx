@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const MovieDetailsPage = () => {
-  const [movie, setMovie] = useState<movieDetails>();
+  const [movie, setMovie] = useState<movieDetails | null>(null);
   const { id } = useParams();
   const { data, isLoading, isError } = useGetMovieDetails(`${id}`);
 
