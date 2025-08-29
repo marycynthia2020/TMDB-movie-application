@@ -10,11 +10,11 @@ const PopularMovies = () => {
   const [popularMovies, setPopularmovies] = useState<movie[]>([]);
 
   useEffect(() => {
-    if (data.results) {
+    if (data?.results) {
       console.log(data.results)
       setPopularmovies(data?.results);
     }
-  }, [data.results]);
+  }, [data?.results]);
 
   if (isLoading || isError) {
     return <Spinner />;

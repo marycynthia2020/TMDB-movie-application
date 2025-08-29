@@ -10,10 +10,10 @@ const UpcomingMovies = () => {
   const [upcomigMovies, setUpcomingmovies] = useState<movie[]>([]);
 
   useEffect(() => {
-    if (data.results) {
+    if (data?.results) {
       setUpcomingmovies(data?.results);
     }
-  }, [data.results]);
+  }, [data?.results]);
 
   if (isLoading || isError) {
     return <Spinner />;
