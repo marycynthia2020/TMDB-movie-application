@@ -1,12 +1,19 @@
 "use client";
 import { movie } from "@/types";
+import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import { useGetTopRatedMovies } from "@/Hooks/use-getTopRatedMovies";
 import Spinner from "./Spinner";
 
 const TopRatedMovies = () => {
   const { data, isLoading, isError } = useGetTopRatedMovies();
-  const topRatedMovies = data?.results || []
+  const [topRatedMovies, setTopRatedmovies] = useState<movie[]>([]);
+
+  useEffect(() => {
+    if (data) {
+      setTopRatedmovies(data?.results);
+    }
+  }, [data]);
 
   if (isLoading || isError) {
     return <Spinner />;

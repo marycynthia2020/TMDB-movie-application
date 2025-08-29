@@ -1,12 +1,19 @@
 "use client";
 import { movie } from "@/types";
+import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import { useGetUpcomingMovies } from "@/Hooks/use-getUpcomingMovies";
 import Spinner from "./Spinner";
 
 const UpcomingMovies = () => {
   const { data, isLoading, isError } = useGetUpcomingMovies();
-  const upcomigMovies = data?.results || []
+  const [upcomigMovies, setUpcomingmovies] = useState<movie[]>([]);
+
+  useEffect(() => {
+    if (data) {
+      setUpcomingmovies(data?.results);
+    }
+  }, [data]);
 
   if (isLoading || isError) {
     return <Spinner />;
