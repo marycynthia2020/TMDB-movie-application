@@ -11,6 +11,7 @@ const PopularMovies = () => {
 
   useEffect(() => {
     if (data.results) {
+      console.log(data.results)
       setPopularmovies(data?.results);
     }
   }, [data.results]);
