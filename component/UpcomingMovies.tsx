@@ -25,8 +25,8 @@ const UpcomingMovies = () => {
         upcoming movies
       </h2>
       <div className=" grid  sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {upcomigMovies.length > 0 ? (
-          upcomigMovies.map((movie: movie) => (
+        {upcomigMovies?.length > 0 ? (
+          upcomigMovies?.map((movie: movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))
         ) : (

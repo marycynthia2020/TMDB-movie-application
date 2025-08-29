@@ -25,8 +25,8 @@ const TopRatedMovies = () => {
         top Rated movies
       </h2>
       <div className=" grid  sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {topRatedMovies.length > 0 ? (
-          topRatedMovies.map((movie: movie) => (
+        {topRatedMovies?.length > 0 ? (
+          topRatedMovies?.map((movie: movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))
         ) : (

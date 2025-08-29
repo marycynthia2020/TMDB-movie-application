@@ -25,8 +25,8 @@ const PopularMovies = () => {
         popular movies
       </h2>
       <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {popularMovies.length > 0 ? (
-          popularMovies.map((movie: movie) => (
+        {popularMovies?.length > 0 ? (
+          popularMovies?.map((movie: movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))
         ) : (
