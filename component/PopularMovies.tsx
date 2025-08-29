@@ -1,19 +1,12 @@
 "use client";
 import { useGetPopularMovies } from "@/Hooks/use-getPopularMovies.query";
 import { movie } from "@/types";
-import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import Spinner from "./Spinner";
 
 const PopularMovies = () => {
   const { data, isLoading, isError } = useGetPopularMovies();
-  const [popularMovies, setPopularmovies] = useState<movie[]>([]);
-
-  useEffect(() => {
-    if (data) {
-      setPopularmovies(data.results);
-    }
-  }, [data]);
+ const popularMovies =  data?.results || []
 
   if (isLoading || isError) {
     return <Spinner />;
