@@ -10,10 +10,10 @@ const TopRatedMovies = () => {
   const [topRatedMovies, setTopRatedmovies] = useState<movie[]>([]);
 
   useEffect(() => {
-    if (data) {
+    if (data.results) {
       setTopRatedmovies(data?.results);
     }
-  }, [data]);
+  }, [data.results]);
 
   if (isLoading || isError) {
     return <Spinner />;
