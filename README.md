@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# A Movie Application for All Kinds of Movies🍿
 
-## Getting Started
+**Description**
 
-First, run the development server:
+This movie application offers an extensive collection of movies, providing users with comprehensive details such as poster images, plot summaries, release dates, genres, ratings, and backdrops. Discover all types of movies  here, and easily search for any title you have in mind.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**Technologies Used**
+* Next.js: The React Framework for the Web
+* Tailwind CSS: A utility-first CSS framework for rapidly building custom designs.
+* TanStack Query (formerly React Query): For data fetching, caching, and state management.
+* TypeScript: For type checking.
+
+**Development Insights**
+
+Building this application primarily involved compiling and applying concepts I've learned in Next.js. It served as an excellent opportunity to flex my knowledge and implement it in a real-world project.
+
+**Future Enhancements**
+
+A key feature I plan to implement in the future is an "Add to Watchlist" button. This will allow users to easily save movies or series they wish to rewatch or come back to later.
+
+**Installation**
+
+To run this application on your local machine, follow these steps:
+
+Clone the repository:
+
+```
+git clone https://github.com/marycynthia2020/Movie-App.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
+Configure enviroment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Usage**
 
-## Learn More
+To start the application, run 
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+**Live Demo**
+You can view a live demo of the application here:
+https://multiplex-dun.vercel.app/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
