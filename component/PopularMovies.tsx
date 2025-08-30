@@ -8,18 +8,17 @@ import Spinner from "./Spinner";
 const PopularMovies = () => {
   const { data, isLoading, isError } = useGetPopularMovies();
   const [popularMovies, setPopularmovies] = useState<movie[]>([]);
-console.log(popularMovies, 1)
+
   useEffect(() => {
     if (data) {
-      console.log(data)
       setPopularmovies(data.results);
     }
-  }, [data, popularMovies]);
+  }, [data]);
 
   if (isLoading || isError) {
-    return <Spinner />;
+    return <Spinner />
   }
-console.log(popularMovies, 2)
+
   return (
     <div className="w-full max-w-[1260px] mx-auto px-4 ">
       <h2 className="text-3xl text-gray-700 dark:text-white mb-8 capitalize">
@@ -31,7 +30,9 @@ console.log(popularMovies, 2)
             <MovieCard movie={movie} key={movie.id} />
           ))
         ) : (
-          <div className="text-2xl text-center font-semibold">No movie found</div>
+          <div className="text-2xl  font-semibold tracking-tight text-gray-900 dark:text-white">
+            No movie found
+          </div>
         )}
       </div>
     </div>

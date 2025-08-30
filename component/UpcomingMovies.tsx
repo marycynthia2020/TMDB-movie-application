@@ -10,10 +10,10 @@ const UpcomingMovies = () => {
   const [upcomigMovies, setUpcomingmovies] = useState<movie[]>([]);
 
   useEffect(() => {
-    if (data?.results) {
-      setUpcomingmovies(data?.results);
+    if (data) {
+      setUpcomingmovies(data.results);
     }
-  }, [data?.results]);
+  }, [data]);
 
   if (isLoading || isError) {
     return <Spinner />;
@@ -25,12 +25,12 @@ const UpcomingMovies = () => {
         upcoming movies
       </h2>
       <div className=" grid  sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {upcomigMovies?.length > 0 ? (
-          upcomigMovies?.map((movie: movie) => (
+        {upcomigMovies.length > 0 ? (
+          upcomigMovies.map((movie: movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))
         ) : (
-          <div className="text-2xl text-center font-semibold">
+          <div className="text-2xl  font-semibold tracking-tight text-gray-900 dark:text-white">
             No movie found
           </div>
         )}

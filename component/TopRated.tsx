@@ -10,10 +10,10 @@ const TopRatedMovies = () => {
   const [topRatedMovies, setTopRatedmovies] = useState<movie[]>([]);
 
   useEffect(() => {
-    if (data?.results) {
-      setTopRatedmovies(data?.results);
+    if (data) {
+      setTopRatedmovies(data.results);
     }
-  }, [data?.results]);
+  }, [data]);
 
   if (isLoading || isError) {
     return <Spinner />;
@@ -25,12 +25,12 @@ const TopRatedMovies = () => {
         top Rated movies
       </h2>
       <div className=" grid  sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {topRatedMovies?.length > 0 ? (
-          topRatedMovies?.map((movie: movie) => (
+        {topRatedMovies.length > 0 ? (
+          topRatedMovies.map((movie: movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))
         ) : (
-          <div className="text-2xl text-center font-semibold">
+          <div className="text-2xl  font-semibold tracking-tight text-gray-900 dark:text-white">
             No movie found
           </div>
         )}

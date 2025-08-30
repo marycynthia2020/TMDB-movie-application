@@ -1,5 +1,5 @@
 "use client";
-import DetailsCard from "@/component/DetailsCard";
+import DetailsCard from "@/component/detailsCard";
 import Spinner from "@/component/Spinner";
 import { useGetMovieDetails } from "@/Hooks/use-getMovieDetails";
 import { movieDetails } from "@/types";
