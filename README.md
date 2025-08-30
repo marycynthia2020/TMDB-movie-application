@@ -33,7 +33,20 @@ Install dependencies:
 ```
 npm install
 ```
-Configure enviroment variables
+Configure enviroment variables:
+
+This application requires an API key from The Movie Database (https://developer.themoviedb.org/reference/intro/getting-started) to fetch movie data. You'll need to create a .env file in the root directory of your project to store this key.
+
+Get a TMDb API Key: Go to the website  above and create an account. In your account settings, you can request and generate an API key (a bearer token).
+
+Create the .env file: In the root of your project, create a new file named .env.
+
+Add your keys: Copy and paste the following lines into the file, replacing the placeholder text with your actual API URL and bearer token.
+
+```
+NEXT_PUBLIC_API_URL=https://api.themoviedb.org/3
+NEXT_PUBLIC_BEARER_TOKEN=YOUR_TMDB_BEARER_TOKEN_HERE
+```
 
 **Usage**
 
